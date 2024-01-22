@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="facebook-domain-verification" content="gasiyf80c98w8k3kk8lki8mztnarqg" />
+      </Head>
       <body className={inter.className}>{children}</body>
       <Analytics />
     </html>
